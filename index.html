@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Portfolio</title>
+  <meta name="description" content="Animated one-page portfolio — GSAP, tilt cards, particle background, neon UI." />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <canvas id="bg-canvas"></canvas>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <div class="logo">SA</div>
+        <div style="line-height:1">
+          <div style="font-weight:800;color:#fff">Shiza Asif</div>
+          <div style="font-size:12px;color:var(--muted)">Animated Front-End Developer</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#hero">Home</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" id="hero">
+        <div class="hero-left">
+          <div class="eyebrow">Hey — I'm</div>
+          <h1> <span class="name-glow">Shiza Asif</span></h1>
+          <p class="desc">I build animated, high-performance front-end experiences — micro-interactions, motion design, and accessible UI. I work with HTML, CSS, JS, Bootstrap, jQuery and Figma.</p>
+          <div class="hero-cta">
+            <button class="btn" id="viewProjects">See Projects</button>
+            <button class="btn ghost" id="downloadResume">Resume</button>
+          </div>
+        </div>
+
+        <div class="hero-right">
+          <div class="card" id="profileCard">
+            <div class="avatar">SA</div>
+            <h4>About Me</h4>
+            <p style="color:var(--muted);font-size:14px">Passionate front-end developer specializing in creating engaging, animated web experiences with clean code and modern design principles.</p>
+            <div class="techs">
+              <div class="chip">Front-End</div>
+              <div class="chip">Animation</div>
+              <div class="chip">UI/UX</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="skills">
+        <div class="sec-head"><div class="line"></div><h2>Skills & Tools</h2></div>
+        <div class="skills">
+          <div class="skill-card">Microsoft Office</div>  
+          <div class="skill-card">HTML </div>
+          <div class="skill-card">CSS Animations & Transitions</div>
+          <div class="skill-card">JavaScript </div>
+          <div class="skill-card">Bootstrap & Responsive</div>
+          <div class="skill-card">jQuery</div>
+          <div class="skill-card">Figma</div>
+          <div class="skill-card">Git & GitHub</div>
+          <div class="skill-card">SEO</div>
+          <div class="skill-card">Xml & Json</div>
+
+        </div>
+      </section>
+
+      <section id="projects">
+        <div class="sec-head"><div class="line"></div><h2>Projects</h2></div>
+        <div class="projects-grid">
+          
+          <!-- Project 1 -->
+           <a href=" https://shizaasif-228.github.io/kitchen-bazaarr/" target="_blank" class="project-link">
+          <div class="project-card tilt" data-tilt>
+            <div class="thumb">Kitchen Bazaar</div>
+            <h3>Kitchen bazaar — Animated Store</h3>
+            <p>Multi-row slider, filters, cart modal and 3D card effects. Fully responsive e-commerce interface with modern animations.</p>
+            <div class="project-tech">
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>JavaScript</span>
+              <span>GSAP</span>
+            </div>
+          </div>
+        </a>
+
+
+
+        <!-- Project 2 -->
+           <a href="https://shizaasif-228.github.io/UrbanFeet/" target="_blank" class="project-link">
+         <div class="project-card tilt" data-tilt>
+          <div class="thumb">UrbanFeet</div>
+          <h3>Stylish Shoes Website</h3>
+          <p>A modern eCommerce website for shoes with product filters, animated cards, and smooth shopping cart experience.</p>
+          <div class="project-tech">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JavaScript</span>
+            <span>Responsive</span>
+          </div>
+        </div>
+           </a>
+
+          <!-- Project 3 -->
+          <a href="https://shizaasif-228.github.io/Wander-Way/" target="_blank" class="project-link">
+    <div class="project-card tilt" data-tilt>
+   <div class="thumb">Travel</div>
+  <h3>Animated Travel Website</h3>
+  <p>One-page travel site with destination cards, smooth scroll, parallax hero, and interactive itinerary/filters for quick trip planning.</p>
+  <div class="project-tech">
+    <span>HTML</span>
+    <span>CSS</span>
+    <span>JavaScript</span>
+    <span>GSAP</span>
+  </div>
+</div>
+</a>
+
+          <!-- Project 4-->
+           <a href=" https://shizaasif-228.github.io/CineMagic/" target="_blank" class="project-link">
+          <div class="project-card tilt" data-tilt>
+         <div class="thumb">Movies</div>
+         <h3>Animated Movies Website</h3>
+         <p>Dynamic movies platform with latest releases, genre filters, search option, and animated cards for trailers and details.</p>
+         <div class="project-tech">
+           <span>HTML</span>
+           <span>CSS</span>
+           <span>JavaScript</span>
+           <span>API</span>
+  </div>
+</div>
+          </a>
+
+          
+
+        </div>
+      </section>
+
+      <section id="contact">
+        <div class="sec-head"><div class="line"></div><h2>Contact</h2></div>
+        <div class="contact-wrap">
+          <form id="contactForm">
+            <div class="form-row">
+              <input type="text" placeholder="Your name" required>
+              <input type="email" placeholder="Your email" required>
+            </div>
+            <textarea placeholder="Message" rows="6" required></textarea>
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-top:8px">
+              <div style="color:var(--muted);font-size:13px">Prefer GitHub issues? <a href="#" style="color:var(--neon)">Open an issue</a></div>
+              <button class="btn" type="submit">Send Message</button>
+            </div>
+          </form>
+        </div>
+      </section>
+
+    </main>
+
+    <footer>© <span id="year"></span> Shiza Asif — Animated Front-End Developer</footer>
+  </div>
+
+  
+  <!-- external libs -->
+  <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.7.3/dist/vanilla-tilt.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script>
+    // -------------------- particle background --------------------
+    const canvas = document.getElementById('bg-canvas');
+    const ctx = canvas.getContext('2d');
+    let w = canvas.width = innerWidth;
+    let h = canvas.height = innerHeight;
+    const particles = [];
+    const colors = ['rgba(124,92,255,0.9)','rgba(95,211,255,0.85)','rgba(255,255,255,0.06)'];
+
+    function rand(min,max){return Math.random()*(max-min)+min}
+    function initParticles(){
+      particles.length = 0;const total = Math.max(60, Math.floor((w*h)/12000));
+      for(let i=0;i<total;i++)particles.push({x:rand(0,w),y:rand(0,h),r:rand(0.6,2.4),vx:rand(-0.2,0.2),vy:rand(-0.25,0.25),c:colors[i%colors.length]})
+    }
+    function resize(){w=canvas.width=innerWidth;h=canvas.height=innerHeight;initParticles()}
+    onresize=resize;initParticles();
+    function loop(){ctx.clearRect(0,0,w,h);
+      // soft gradient overlay
+      const g=ctx.createLinearGradient(0,0,w,h);g.addColorStop(0,'rgba(12,10,18,0.25)');g.addColorStop(1,'rgba(3,5,12,0.45)');ctx.fillStyle=g;ctx.fillRect(0,0,w,h);
+      for(const p of particles){p.x+=p.vx;p.y+=p.vy; if(p.x<0)p.x=w; if(p.x>w)p.x=0; if(p.y<0)p.y=h; if(p.y>h)p.y=0; ctx.beginPath();ctx.fillStyle=p.c;ctx.globalAlpha=0.9;ctx.arc(p.x,p.y,p.r,0,Math.PI*2);ctx.fill();}
+      requestAnimationFrame(loop);
+    }
+    loop();
+
+    // -------------------- GSAP reveals & interactions --------------------
+    gsap.registerPlugin(ScrollTrigger);
+    gsap.from('.logo',{scale:0,opacity:0,duration:0.8,ease:'back'});
+    gsap.from('header nav a',{y:-8,opacity:0,duration:0.8,stagger:0.08,delay:0.2});
+
+    // Hero intro
+    gsap.from('.hero-left .eyebrow',{y:10,opacity:0,duration:0.7});
+    gsap.from('h1',{y:20,opacity:0,duration:1,delay:0.1,stagger:0.05,scale:0.98,ease:'power3.out'});
+    gsap.from('.desc',{y:18,opacity:0,duration:0.9,delay:0.25});
+    gsap.from('#profileCard',{y:30,opacity:0,duration:1,delay:0.3,rotation:-2});
+
+    // Floating profile tilt subtle animation
+    gsap.to('#profileCard',{y:'-=8',yoyo:true,repeat:-1,duration:3,ease:'sine.inOut'});
+
+    // Skills reveal
+    gsap.from('.skill-card',{y:30,opacity:0,duration:0.9,stagger:0.12,scrollTrigger:{trigger:'#skills',start:'top 80%'}})
+
+    // Projects stagger
+    gsap.from('.project-card',{y:40,opacity:0,duration:1,stagger:0.12,scrollTrigger:{trigger:'#projects',start:'top 75%'}})
+
+    // Smooth scroll to projects
+    document.getElementById('viewProjects').addEventListener('click',()=>{gsap.to(window,{scrollTo:'#projects',duration:1.05,ease:'power2.out'})})
+
+    // Init vanilla-tilt with more perspective on project cards
+    VanillaTilt.init(document.querySelectorAll('.tilt'),{max:12,speed:550,scale:1.02,perspective:1000,glare:true,'max-glare':0.12});
+
+    // Form simple demo
+    document.getElementById('contactForm').addEventListener('submit',function(e){e.preventDefault();const b=document.querySelector('#contactForm button');b.textContent='Sent ✓';b.disabled=true;setTimeout(()=>{b.textContent='Send Message';b.disabled=false;this.reset()},1800)})
+
+    // Set year
+    document.getElementById('year').textContent=new Date().getFullYear();
+
+    // Resume button behavior (download placeholder)
+    document.getElementById('downloadResume').addEventListener('click',()=>{
+      const a=document.createElement('a');a.href='data:text/plain,Resume placeholder for Shiza Asif';a.download='ShizaAsif_Resume.txt';a.click();
+    });
+  </script>
+</body>
+</html>
