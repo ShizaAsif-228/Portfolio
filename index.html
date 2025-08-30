@@ -1,233 +1,330 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Portfolio</title>
-  <meta name="description" content="Animated one-page portfolio — GSAP, tilt cards, particle background, neon UI." />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <canvas id="bg-canvas"></canvas>
-  <div class="wrap">
-    <header>
-      <div class="brand">
-        <div class="logo">SA</div>
-        <div style="line-height:1">
-          <div style="font-weight:800;color:#fff">Shiza Asif</div>
-          <div style="font-size:12px;color:var(--muted)">Animated Front-End Developer</div>
-        </div>
-      </div>
-      <nav>
-        <a href="#hero">Home</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </header>
-
-    <main>
-      <section class="hero" id="hero">
-        <div class="hero-left">
-          <div class="eyebrow">Hey — I'm</div>
-          <h1> <span class="name-glow">Shiza Asif</span></h1>
-          <p class="desc">I build animated, high-performance front-end experiences — micro-interactions, motion design, and accessible UI. I work with HTML, CSS, JS, Bootstrap, jQuery and Figma.</p>
-          <div class="hero-cta">
-            <button class="btn" id="viewProjects">See Projects</button>
-            <button class="btn ghost" id="downloadResume">Resume</button>
-          </div>
-        </div>
-
-        <div class="hero-right">
-          <div class="card" id="profileCard">
-            <div class="avatar">SA</div>
-            <h4>About Me</h4>
-            <p style="color:var(--muted);font-size:14px">Passionate front-end developer specializing in creating engaging, animated web experiences with clean code and modern design principles.</p>
-            <div class="techs">
-              <div class="chip">Front-End</div>
-              <div class="chip">Animation</div>
-              <div class="chip">UI/UX</div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="skills">
-        <div class="sec-head"><div class="line"></div><h2>Skills & Tools</h2></div>
-        <div class="skills">
-          <div class="skill-card">Microsoft Office</div>  
-          <div class="skill-card">HTML </div>
-          <div class="skill-card">CSS Animations & Transitions</div>
-          <div class="skill-card">JavaScript </div>
-          <div class="skill-card">Bootstrap & Responsive</div>
-          <div class="skill-card">jQuery</div>
-          <div class="skill-card">Figma</div>
-          <div class="skill-card">Git & GitHub</div>
-          <div class="skill-card">SEO</div>
-          <div class="skill-card">Xml & Json</div>
-
-        </div>
-      </section>
-
-      <section id="projects">
-        <div class="sec-head"><div class="line"></div><h2>Projects</h2></div>
-        <div class="projects-grid">
-          
-          <!-- Project 1 -->
-           <a href=" https://shizaasif-228.github.io/kitchen-bazaarr/" target="_blank" class="project-link">
-          <div class="project-card tilt" data-tilt>
-            <div class="thumb">Kitchen Bazaar</div>
-            <h3>Kitchen bazaar — Animated Store</h3>
-            <p>Multi-row slider, filters, cart modal and 3D card effects. Fully responsive e-commerce interface with modern animations.</p>
-            <div class="project-tech">
-              <span>HTML</span>
-              <span>CSS</span>
-              <span>JavaScript</span>
-              <span>GSAP</span>
-            </div>
-          </div>
-        </a>
+:root{--bg:#060611;
+    --card:#0f1220;
+    --neon:#7c5cff;
+    --accent:#5fd3ff;
+    --muted:#9aa0b4}
 
 
+    *{box-sizing:border-box;
+    margin:0;
+    padding:0}
 
-        <!-- Project 2 -->
-           <a href="https://shizaasif-228.github.io/UrbanFeet/" target="_blank" class="project-link">
-         <div class="project-card tilt" data-tilt>
-          <div class="thumb">UrbanFeet</div>
-          <h3>Stylish Shoes Website</h3>
-          <p>A modern eCommerce website for shoes with product filters, animated cards, and smooth shopping cart experience.</p>
-          <div class="project-tech">
-            <span>HTML</span>
-            <span>CSS</span>
-            <span>JavaScript</span>
-            <span>Responsive</span>
-          </div>
-        </div>
-           </a>
 
-          <!-- Project 3 -->
-          <a href="https://shizaasif-228.github.io/Wander-Way/" target="_blank" class="project-link">
-    <div class="project-card tilt" data-tilt>
-   <div class="thumb">Travel</div>
-  <h3>Animated Travel Website</h3>
-  <p>One-page travel site with destination cards, smooth scroll, parallax hero, and interactive itinerary/filters for quick trip planning.</p>
-  <div class="project-tech">
-    <span>HTML</span>
-    <span>CSS</span>
-    <span>JavaScript</span>
-    <span>GSAP</span>
-  </div>
-</div>
-</a>
+    html,body{height:100%}
 
-          <!-- Project 4-->
-           <a href=" https://shizaasif-228.github.io/CineMagic/" target="_blank" class="project-link">
-          <div class="project-card tilt" data-tilt>
-         <div class="thumb">Movies</div>
-         <h3>Animated Movies Website</h3>
-         <p>Dynamic movies platform with latest releases, genre filters, search option, and animated cards for trailers and details.</p>
-         <div class="project-tech">
-           <span>HTML</span>
-           <span>CSS</span>
-           <span>JavaScript</span>
-           <span>API</span>
-  </div>
-</div>
-          </a>
 
-          
+    body{font-family:Inter,system-ui,Arial;
+    color:#eaf0ff;
+    background:var(--bg);
+    -webkit-font-smoothing:antialiased}
 
-        </div>
-      </section>
 
-      <section id="contact">
-        <div class="sec-head"><div class="line"></div><h2>Contact</h2></div>
-        <div class="contact-wrap">
-          <form id="contactForm">
-            <div class="form-row">
-              <input type="text" placeholder="Your name" required>
-              <input type="email" placeholder="Your email" required>
-            </div>
-            <textarea placeholder="Message" rows="6" required></textarea>
-            <div style="display:flex;justify-content:space-between;align-items:center;margin-top:8px">
-              <div style="color:var(--muted);font-size:13px">Prefer GitHub issues? <a href="#" style="color:var(--neon)">Open an issue</a></div>
-              <button class="btn" type="submit">Send Message</button>
-            </div>
-          </form>
-        </div>
-      </section>
+    /* --- particle canvas layer --- */
+    #bg-canvas{
+    position:fixed;
+    inset:0;
+    z-index:0}
 
-    </main>
+    /* wrapper */
+    .wrap{position:relative;
+    z-index:5;
+    min-height:100vh}
 
-    <footer>© <span id="year"></span> Shiza Asif — Animated Front-End Developer</footer>
-  </div>
 
-  
-  <!-- external libs -->
-  <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.7.3/dist/vanilla-tilt.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-  <script>
-    // -------------------- particle background --------------------
-    const canvas = document.getElementById('bg-canvas');
-    const ctx = canvas.getContext('2d');
-    let w = canvas.width = innerWidth;
-    let h = canvas.height = innerHeight;
-    const particles = [];
-    const colors = ['rgba(124,92,255,0.9)','rgba(95,211,255,0.85)','rgba(255,255,255,0.06)'];
+    header{position:fixed;
+    left:0;
+    right:0;
+    top:12px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:14px 32px;
+    z-index:10}
 
-    function rand(min,max){return Math.random()*(max-min)+min}
-    function initParticles(){
-      particles.length = 0;const total = Math.max(60, Math.floor((w*h)/12000));
-      for(let i=0;i<total;i++)particles.push({x:rand(0,w),y:rand(0,h),r:rand(0.6,2.4),vx:rand(-0.2,0.2),vy:rand(-0.25,0.25),c:colors[i%colors.length]})
+
+    .brand{display:flex;
+    gap:12px;
+    align-items:center}
+
+
+    .logo{width:54px;
+    height:54;
+    border-radius:12px;
+    display:grid;
+    place-items:center;
+    font-weight:800;
+    color:#071; 
+    background:linear-gradient(135deg,var(--neon),var(--accent));
+    box-shadow:0 10px 30px rgba(124,92,255,0.12)}
+
+
+    nav a{color:rgba(234,240,255,0.8);
+    margin-left:18px;
+    text-decoration:none;
+    font-weight:600;
+    opacity:0.9}
+
+
+    nav a:hover{color:var(--neon)}
+
+
+    /* Hero */
+    .hero{min-height:100vh;
+    display:grid;
+    grid-template-columns:1fr 420px;
+    gap:32px;
+    align-items:center;
+    padding:120px 60px}
+
+
+    .hero-left{max-width:780px}
+
+
+    .eyebrow{color:var(--muted);
+    font-weight:600;
+    margin-bottom:12px}
+
+
+    h1{font-size:3.4rem;
+    line-height:1;
+    margin:0 0 14px;
+    text-shadow:0 6px 30px rgba(124,92,255,0.08)}
+
+
+    .name-glow{background:linear-gradient(90deg,var(--neon),var(--accent));
+    -webkit-background-clip:text;
+    background-clip:text;
+    color:transparent}
+
+
+    .desc{color:var(--muted);
+    font-size:1.05rem;
+    max-width:680px}
+
+
+    .hero-cta{margin-top:28px;
+    display:flex;
+    gap:14px;
+    align-items:center}
+
+
+    .btn{padding:10px 16px;
+    border-radius:12px;
+    border:1px solid rgba(255,255,255,0.06);
+    background:linear-gradient(90deg,rgba(124,92,255,0.12),rgba(95,211,255,0.04));
+    cursor:pointer;
+    color:#fff;font-weight:700}
+
+
+    .ghost{background:transparent;
+    border:1px solid rgba(255,255,255,0.06)}
+
+
+    /* Hero right card */
+    .hero-right{display:flex;
+    justify-content:center}
+
+
+    .card{width:420px;
+    background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+    border-radius:18px;padding:18px;border:1px solid rgba(255,255,255,0.04);
+    backdrop-filter: blur(6px);
+    box-shadow: 0 20px 60px rgba(2,6,23,0.6)}
+
+
+    .avatar{height:180px;
+    border-radius:12px;
+    background:linear-gradient(135deg,var(--neon),var(--accent));
+    display:grid;
+    place-items:center;
+    color:#031; 
+    font-weight:900;
+    font-size:40px
     }
-    function resize(){w=canvas.width=innerWidth;h=canvas.height=innerHeight;initParticles()}
-    onresize=resize;initParticles();
-    function loop(){ctx.clearRect(0,0,w,h);
-      // soft gradient overlay
-      const g=ctx.createLinearGradient(0,0,w,h);g.addColorStop(0,'rgba(12,10,18,0.25)');g.addColorStop(1,'rgba(3,5,12,0.45)');ctx.fillStyle=g;ctx.fillRect(0,0,w,h);
-      for(const p of particles){p.x+=p.vx;p.y+=p.vy; if(p.x<0)p.x=w; if(p.x>w)p.x=0; if(p.y<0)p.y=h; if(p.y>h)p.y=0; ctx.beginPath();ctx.fillStyle=p.c;ctx.globalAlpha=0.9;ctx.arc(p.x,p.y,p.r,0,Math.PI*2);ctx.fill();}
-      requestAnimationFrame(loop);
+
+
+    .card h4
+    {margin-top:12px}
+
+
+    .techs{display:flex;
+    flex-wrap:wrap;
+    gap:8px;
+    margin-top:12px}
+
+
+    .chip{padding:8px 10px;
+    border-radius:999px;
+    background:rgba(255,255,255,0.03);
+    border:1px solid rgba(255,255,255,0.04);
+    font-weight:700}
+
+
+    /* Sections */
+    section{
+    padding:100px 60px
     }
-    loop();
 
-    // -------------------- GSAP reveals & interactions --------------------
-    gsap.registerPlugin(ScrollTrigger);
-    gsap.from('.logo',{scale:0,opacity:0,duration:0.8,ease:'back'});
-    gsap.from('header nav a',{y:-8,opacity:0,duration:0.8,stagger:0.08,delay:0.2});
 
-    // Hero intro
-    gsap.from('.hero-left .eyebrow',{y:10,opacity:0,duration:0.7});
-    gsap.from('h1',{y:20,opacity:0,duration:1,delay:0.1,stagger:0.05,scale:0.98,ease:'power3.out'});
-    gsap.from('.desc',{y:18,opacity:0,duration:0.9,delay:0.25});
-    gsap.from('#profileCard',{y:30,opacity:0,duration:1,delay:0.3,rotation:-2});
+    .sec-head{display:flex;
+    align-items:center;
+    gap:12px;
+    margin-bottom:22px
+    }
 
-    // Floating profile tilt subtle animation
-    gsap.to('#profileCard',{y:'-=8',yoyo:true,repeat:-1,duration:3,ease:'sine.inOut'});
 
-    // Skills reveal
-    gsap.from('.skill-card',{y:30,opacity:0,duration:0.9,stagger:0.12,scrollTrigger:{trigger:'#skills',start:'top 80%'}})
+    .line{width:6px;
+    height:34px;
+    border-radius:6px;
+    background:linear-gradient(180deg,var(--neon),var(--accent))}
 
-    // Projects stagger
-    gsap.from('.project-card',{y:40,opacity:0,duration:1,stagger:0.12,scrollTrigger:{trigger:'#projects',start:'top 75%'}})
 
-    // Smooth scroll to projects
-    document.getElementById('viewProjects').addEventListener('click',()=>{gsap.to(window,{scrollTo:'#projects',duration:1.05,ease:'power2.out'})})
+    h2{font-size:1.6rem}
 
-    // Init vanilla-tilt with more perspective on project cards
-    VanillaTilt.init(document.querySelectorAll('.tilt'),{max:12,speed:550,scale:1.02,perspective:1000,glare:true,'max-glare':0.12});
 
-    // Form simple demo
-    document.getElementById('contactForm').addEventListener('submit',function(e){e.preventDefault();const b=document.querySelector('#contactForm button');b.textContent='Sent ✓';b.disabled=true;setTimeout(()=>{b.textContent='Send Message';b.disabled=false;this.reset()},1800)})
+    /* Skills grid */
+    .skills{display:flex;
+    flex-wrap:wrap;
+    gap:12px}
 
-    // Set year
-    document.getElementById('year').textContent=new Date().getFullYear();
 
-    // Resume button behavior (download placeholder)
-    document.getElementById('downloadResume').addEventListener('click',()=>{
-      const a=document.createElement('a');a.href='data:text/plain,Resume placeholder for Shiza Asif';a.download='ShizaAsif_Resume.txt';a.click();
-    });
-  </script>
-</body>
-</html>
+    .skill-card{min-width:120px;
+    padding:16px;
+    border-radius:12px;
+    background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+    border:1px solid rgba(255,255,255,0.04);
+    transition:transform .25s, box-shadow .25s}
+
+
+    .skill-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 20px 40px rgba(124,92,255,0.12)
+    }
+
+
+    /* Projects - Updated to 6 cards in 2 rows */
+    .projects-grid{
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+.project-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+
+    .project-card{
+      padding: 20px;
+      border-radius: 14px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      border: 1px solid rgba(255,255,255,0.04);
+      transition: transform .25s, box-shadow .25s;
+      cursor: pointer;
+      height: 280px;
+      display: flex;
+      flex-direction: column;
+    }
+
+
+    .project-card .thumb{
+      height: 140px;
+      border-radius: 10px;
+      margin-bottom: 12px;
+      background: linear-gradient(135deg, rgba(124,92,255,0.12), rgba(95,211,255,0.06));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      color: #fff;
+    }
+
+    
+    .project-card:hover{
+      transform: translateY(-14px) rotateX(4deg);
+      box-shadow: 0 40px 80px rgba(11,12,26,0.6);
+    }
+    
+    .project-card h3 {
+      margin-bottom: 10px;
+      font-size: 1.3rem;
+    }
+    
+    .project-card p {
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.5;
+      flex-grow: 1;
+    }
+    
+    .project-tech {
+      display: flex;
+      gap: 8px;
+      margin-top: 15px;
+      flex-wrap: wrap;
+    }
+    
+    .project-tech span {
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: rgba(124,92,255,0.1);
+      color: var(--neon);
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+
+    /* Contact form */
+    .contact-wrap{max-width:700px;
+    margin:auto}
+
+
+    .form-row{display:flex;
+    gap:12px}
+
+
+    .form-row input
+                {flex:1}
+
+
+    input,textarea{
+      width:100%;
+      padding:14px;
+      border-radius:10px;
+      border:1px solid rgba(255,255,255,0.06);
+      background:rgba(255,255,255,0.02);
+      color:#eaf0ff;
+      outline:none;
+      transition:box-shadow .25s,border .25s}
+
+
+    input:focus,textarea:focus{box-shadow:0 0 30px rgba(124,92,255,0.12);
+      border-color:var(--neon)}
+
+
+    footer{padding:40px 60px;
+      text-align:center;
+      color:var(--muted)}
+
+
+    /* responsive */
+    @media (max-width:980px){
+      .hero{grid-template-columns:1fr; 
+        padding:110px 28px}
+
+
+      .projects-grid{
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+
+      nav a{margin-left:12px}
+    }
+
+
+    @media (max-width:640px){
+      .projects-grid{grid-template-columns:1fr}
+      header{padding:12px 18px}
+    }
