@@ -1,4 +1,4 @@
-:root {
+ :root {
       --bg: #060611;
       --card: #0f1220;
       --neon: #7c5cff;
@@ -503,4 +503,3 @@
         transform: translateY(-8px) rotate(-45deg);
       }
     }
-
